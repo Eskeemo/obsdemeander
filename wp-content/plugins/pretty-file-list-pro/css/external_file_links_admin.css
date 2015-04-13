@@ -1,0 +1,137 @@
+/* 
+    Document   : external_file_links_admin
+    Created on : 30-Nov-2012, 23:13:00
+    Author     : jamesb
+    Description:
+        Styles the edit page for External files
+*/
+
+.icon32{background:transparent url("../images/PrettyFileProBigIcon.png") no-repeat 50% 50%;}
+
+input{border-color:#ccc;}
+
+#external_file_linkfiledate{width:70px;}
+#external_file_linkfileurl{width:70%;}
+
+#CheckFile{display:inline-block;*display:inline;zoom:1;}
+#CheckFile.loading{
+    padding-right:30px;
+    position:relative;
+    
+}
+#CheckFile.loading:after{
+    background:transparent url(../images/loading16.gif) no-repeat 0 0;
+    content:"";
+    display:block;
+    height:32px;
+    position:absolute;
+    right:-9px;
+    top:5px;
+    width:32px;
+}
+
+/*Reusable*/
+.hidden{display:none;}
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+}
+.clearfix {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+.threeCol{float:left;width:32%;}
+.threeCol.last{width:30%}
+
+.tags-field{clear:both;}
+
+/*Buttons*/
+.btn{
+    display:inline-block;
+    *display:inline;
+    font-size: 12px;
+    padding: 5px 10px;
+    text-decoration: none;
+    zoom:1;
+
+    /*Gradient background*/
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* IE10+ */
+    background: linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+
+    /*Rounded corners*/
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; 
+
+    /*Text shadow*/
+    text-shadow: 0px 2px 0px #fff;
+
+    border:solid 1px #ccc;
+    color:#555;
+}
+
+.btn:hover{
+    background-color:#ccc;
+    border-color:#aaa;
+    color:#D54E21;      
+}
+
+.btn:active{
+    /*Inset drop-shadow*/
+    -webkit-box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.2); 
+
+    background-color:#ededed;	
+    background-position:0 -10px;
+    background-repeat:repeat-x;
+    border-color:#aaa;   
+    color:#fff;
+}
+
+/*Error message*/
+
+.form-wrap label.error,
+.form-wrap .fieldError{
+    background: rgb(232,37,23); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(232,37,23,1) 0%, rgba(207,4,4,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(232,37,23,1)), color-stop(100%,rgba(207,4,4,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(232,37,23,1) 0%,rgba(207,4,4,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(232,37,23,1) 0%,rgba(207,4,4,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, rgba(232,37,23,1) 0%,rgba(207,4,4,1) 100%); /* IE10+ */
+    background: linear-gradient(top, rgba(232,37,23,1) 0%,rgba(207,4,4,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e82517', endColorstr='#cf0404',GradientType=0 ); /* IE6-9 */
+    border:solid 1px #BF0303;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    color:#fff;
+    font-weight:bold;
+    padding:10px;
+    margin-top:10px;    
+    position:relative;   
+}
+
+.form-wrap .fieldError:after{
+    content:"";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #BF0303;
+    position: absolute;
+    top:-10px;
+    left:200px;
+}
+
+.form-wrap input.error{border:solid 1px #BF0303;}
+.form-wrap label.error{float:right;padding:5px;text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);}

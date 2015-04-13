@@ -1,0 +1,48 @@
+/*
+FOUNDRY FRAMEWORK // style.css
+====================================
+This file is a standard WordPress file. In fact it is mandatory
+if you want stuff to work. So the only reason it is included is
+to prevent Wordpress from crashing.
+
+The Foundry Framework is developed by combining and customizing several
+great frameworks and starterkits, such as the bones framework by Eddie
+Machado (htp://themble.com/bones) and the FoundationPress starter-theme
+by Ole Fredrik (http://foundationpress.olefredrik.com).
+
+Author		: Emiel Nawijn
+URL 		: http://www.eskeemo.com
+Version 	: 1.0
+License		: WTFPL
+License URI : http://sam.zoy.org/wtfpl/
+Are you serious? Yes.
+*/
+
+
+
+/********************************************************
+/************* SO WHAT'S UP WITH THIS FILE? *************
+/********************************************************
+
+/*
+Unfortunately WordPress requires a style.css file located 
+in the theme's root folder in order for stuff to work.
+However, we don't do vanilla CSS. We're hip and happening
+so we are using Sass.
+
+Sass is a superset of CSS that adds in amazing features
+such as variables, nested selectors and loops. It's also
+the easiest way to customize Foundation 5. You can find
+all these great Sass files in the library/scss folder.
+
+Theme Check (http://wordpress.org/plugins/theme-check/)
+also is constantly telling me that it needs some classes 
+in the CSS, even though they are in the REAL stylesheet,
+located in the separate css folder. So we're gonna drop 
+those classes here too, just to keep everybody happy. 
+Great work, Theme Check (eye roll)
+*/
+
+.sticky {}          /* DO NOT EDIT THIS */
+.gallery-caption {} /* THESE ARE USELESS */
+.bypostauthor {}    /* THEY ARE ONLY TO KEEP THEME CHECK HAPPY */

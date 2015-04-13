@@ -1,0 +1,85 @@
+/**************************************************/
+/******* MEANDER PREDEFINED CUSTOMIZATIONS ********/
+/**************************************************/
+
+
+// custom color definitions
+$summer			: #43668c;
+$meander0		: rgb(52,56,141);
+$meander0-trans	: rgba(52,56,141,0.90);
+$meander1		: #009547;
+$meander2		: #9abd36;
+$meander3		: #fee910;
+$meander4		: #ec7b23;
+$meander5		: #cb1417;
+$meander6		: #e30874;
+$meander7		: #a02180;
+$meander8		: rgb(9,159,219);
+$meander8-trans	: rgba(9,159,219,0.95);
+
+
+// custom font-families
+@font-face {font-family: 'MikadoUltra';
+	src: url('../type/mikado/2CBE4C_0_0.eot');
+	src: url('../type/mikado/2CBE4C_0_0.eot?#iefix') format('embedded-opentype'),
+		url('../type/mikado/2CBE4C_0_0.woff2') format('woff2'),
+		url('../type/mikado/2CBE4C_0_0.woff') format('woff'),
+		url('../type/mikado/2CBE4C_0_0.ttf') format('truetype'),
+		url('../type/mikado/2CBE4C_0_0.svg#wf') format('svg');
+}
+@font-face {font-family: 'MikadoRegular';
+	src: url('../type/mikado/2CBE4C_1_0.eot');
+	src: url('../type/mikado/2CBE4C_1_0.eot?#iefix') format('embedded-opentype'),
+		url('../type/mikado/2CBE4C_1_0.woff2') format('woff2'),
+		url('../type/mikado/2CBE4C_1_0.woff') format('woff'),
+		url('../type/mikado/2CBE4C_1_0.ttf') format('truetype'),
+		url('../type/mikado/2CBE4C_1_0.svg#wf') format('svg');
+}
+@font-face {font-family: 'MikadoLight';
+	src: url('../type/mikado/2CBE4C_2_0.eot');
+	src: url('../type/mikado/2CBE4C_2_0.eot?#iefix') format('embedded-opentype'),
+		url('../type/mikado/2CBE4C_2_0.woff2') format('woff2'),
+		url('../type/mikado/2CBE4C_2_0.woff') format('woff'),
+		url('../type/mikado/2CBE4C_2_0.ttf') format('truetype'),
+		url('../type/mikado/2CBE4C_2_0.svg#wf') format('svg');
+}
+@font-face {font-family: 'MikadoBold';
+	src: url('../type/mikado/2CBE4C_3_0.eot');
+	src: url('../type/mikado/2CBE4C_3_0.eot?#iefix') format('embedded-opentype'),
+		url('../type/mikado/2CBE4C_3_0.woff2') format('woff2'),
+		url('../type/mikado/2CBE4C_3_0.woff') format('woff'),
+		url('../type/mikado/2CBE4C_3_0.ttf') format('truetype'),
+		url('../type/mikado/2CBE4C_3_0.svg#wf') format('svg');
+}
+
+
+// create standard shadows
+.lightshadow {
+	-moz-box-shadow: 0 0 8px 0px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0 0 8px 0px rgba(0,0,0,0.3);
+	box-shadow: 0 0 8px 0px rgba(0,0,0,0.3);
+}
+.darkshadow {
+	-moz-box-shadow: 0 0 5px 0px rgba(0,0,0,0.6);
+	-webkit-box-shadow: 0 0 5px 0px rgba(0,0,0,0.6);
+	box-shadow: 0 0 5px 0px rgba(0,0,0,0.6);
+}
+
+
+// create white transparant background
+.transparent {
+	background: rgb(255, 255, 255) transparent;
+	background: rgba(255, 255, 255, 0.90) !important;
+	filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#E6FFFFFF, endColorstr=#E6FFFFFF)";
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#E6FFFFFF, endColorstr=#E6FFFFFF)";
+}
+
+
+// make all transitions smooth
+.animate {
+	-webkit-transition: all 0.8s;
+	-moz-transition: all 0.8s;
+	transition: all 0.8s;
+}
+
+

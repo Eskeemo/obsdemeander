@@ -1,0 +1,327 @@
+/**************************************************/
+/************** BODY CUSTOMIZATIONS ***************/
+/**************************************************/
+
+// load correct backgroundfile based on screensize
+body {
+	background-image: url(../img/bg-summer.jpg);
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-color: $summer;
+	background-attachment: scroll;
+	background-size: cover;
+}
+
+
+
+/**************************************************/
+/********* TOP NAVIGATION CUSTOMIZATIONS **********/
+/**************************************************/
+
+// topbar container position
+.nav-container {
+	margin: 30px 0;
+	height: 100px;
+
+	// include the correct logo
+	.logo {
+		background-image: url(../img/logo-full.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: #fff;
+		float: left;
+		height: 120px;
+		width: 140px;
+		margin: -20px 20px 0 15px;
+	}
+}
+
+// style all the elements of the top-bar
+.top-bar {
+
+	//position top menu-items in bottom part of the top-bar
+	ul {
+		margin-top: 10px;
+	}
+
+	// adjust height of items to previous top-margin
+	ul li, ul li a {
+		height: 80px !important;
+	}
+
+	// style the little triangle for dropdown menus
+	ul > li.has-dropdown a:after {
+		border-color: $meander0 transparent transparent transparent;
+		margin-top:-5px;
+	}
+
+	// give the little triangle a hover state
+	ul > li.has-dropdown a:hover:after {
+		border-color: transparent transparent $meander0 transparent;
+		margin-top:-10px;
+	}
+	
+	// style the dropdown menus, with subtle topshadow
+	.sub-menu.dropdown {
+		margin-top: -10px;
+		background-color: scale-color($meander8-trans, $lightness: 10%);
+		border: 1px solid scale-color($meander8, $lightness: 0%);
+		border-top: none;
+		-webkit-box-shadow: inset 0px 10px 5px -10px rgba(0,0,0,0.6);
+		-moz-box-shadow: inset 0px 10px 5px -10px rgba(0,0,0,0.6);
+		box-shadow: inset 0px 10px 5px -10px rgba(0,0,0,0.6);
+
+		// give dropdown items the correct height
+		li {
+			height: 50px !important;
+		}
+		
+		// give hyperlinks the same height and correct font
+		li a {
+			line-height: 50px !important;
+			font-family: $font-family-sans-serif;
+			font-size: rem-calc(14);
+			text-transform: lowercase;
+		}
+		
+		// and give them a different color on hover
+		li a:hover {
+		color: #fff !important;
+		}
+	}
+}
+
+
+
+/**************************************************/
+/******** SIDE NAVIGATION CUSTOMIZATIONS **********/
+/**************************************************/
+
+// create a fixed side nav container
+
+.sidebar {
+	position: absolute;
+	width: 250px;
+	z-index: 1;
+
+	ul.side-nav {
+		padding: 10px 10px 0 10px;
+	}
+	
+	.innerbox {
+		padding: 10px 10px;
+	}
+
+}
+
+
+// make it sticky on scroll
+.stuck {
+	position: fixed;
+	top: 20px;
+}
+
+//side-nav styling
+.side-nav {
+		
+	// style the intro text
+	p {
+		margin:-6px 0 12px;
+		font-size: rem-calc(14);
+		color: scale-color($meander0, $lightness: 60%);
+	}
+		
+	// style the subnav lists items
+	li {
+		list-style-type: none;
+		list-style-position: inside;
+		color: $meander0;
+		margin: 0;
+
+		// remove the padding from the list items
+		a {
+			padding: 6px 0 !important;
+		}
+
+		// style the hover effect
+		a:hover {
+			color: scale-color($meander0, $lightness: 60%) !important;
+			background: none !important;
+		}
+	}
+
+	// style the active link
+	li.current_page_item {
+		width: 208px;
+		margin-left: -10px;
+		padding-left: 10px;
+		background-color: $meander8;
+		border-top: 1px solid $meander0;
+		border-bottom: 1px solid $white;
+
+		a {
+			color: $white;
+		}
+
+		a:hover {
+			color: $white !important;
+		}
+
+	}
+
+	li.current_page_item:last-child {
+		border-bottom: none;
+	}
+
+}
+
+
+
+/**************************************************/
+/********* OFF CANVAS NAV CUSTOMIZATIONS **********/
+/**************************************************/
+
+// prevent off-canvas menu from "jumpingdown " when scrolling
+// see also https://github.com/zurb/foundation/issues/3671
+/*
+.f-topbar-fixed {
+	@media #{$small-only} {
+		padding-top: 0px !important;
+	}
+
+	@media #{$medium-up} {
+		padding-top: $topbar-height + 50px !important;
+	}
+}
+*/
+
+
+
+
+/**************************************************/
+/*********** PAGE LEVEL CUSTOMIZATIONS ************/
+/**************************************************/
+
+// style the header-images on top of each page
+.page-thumbnail {
+	max-height: 350px;
+	margin-bottom: 0px;
+	
+	.thumb {
+		border-top: 6px solid $meander8;
+		border-right: 6px solid $meander8;
+		border-left: 6px solid $meander8;
+		max-height: 350px;
+		-webkit-box-shadow: inset 0px 0px 4px 1px rgba(0,0,0,0.75);
+		-moz-box-shadow: inset 0px 0px 4px 1px rgba(0,0,0,0.75);
+		box-shadow: inset 0px 0px 4px 1px rgba(0,0,0,0.75);
+
+		img {
+			position: relative;
+			width: 100%;
+			max-height: 346px;
+			z-index: -2;
+		}
+		.caption {
+			position: relative;
+			font-family: MikadoLight;
+			border-top-left-radius: $global-radius;
+			bottom: 42px;
+			right: 0px;
+			float: right;
+			color: #fff;
+			padding: 8px 20px 2px;
+			background-color: $meander8;
+			z-index: 0;
+			-webkit-box-shadow: -2px -2px 2px 0px rgba(0,0,0,0.75);
+			-moz-box-shadow: -2px -2px 2px 0px rgba(0,0,0,0.75);
+			box-shadow: -2px -2px 2px 0px rgba(0,0,0,0.75);
+		}
+	}	
+}
+
+// position page-content besides the fixed-width side navigation
+.page-content {
+	padding-left: 250px;
+}
+
+// style the main page content
+.outerbox {
+	padding: 6px;
+	margin-bottom: 30px;
+	background-color: $meander8;
+}
+.innerbox {
+	padding: 20px;
+	//border-radius: $global-radius;
+	background: rgb(255, 255, 255) transparent;
+	background: rgba(255, 255, 255, 0.85) !important;
+	filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#E6FFFFFF, endColorstr=#E6FFFFFF)";
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#E6FFFFFF, endColorstr=#E6FFFFFF)";	
+}
+
+
+
+/**************************************************/
+/*********** POST LEVEL CUSTOMIZATIONS ************/
+/**************************************************/
+
+//style the small post-thumbnail in overview pages
+.post-thumbnail {
+	position:relative;
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+//style the circular images of the team
+.circle {
+	float:left;
+	margin: -50px 10px 0 -35px;
+	border:6px solid $meander8;
+	border-radius: 50%;
+}
+
+
+
+/**************************************************/
+/************* CUSTOM FOOTER STYLES ***************/
+/**************************************************/
+
+.grass {
+	position: relative;
+	width: 100%;
+	height: 68px;
+	background-image: url(../img/footer-bg.png);
+	background-size: cover;
+	z-index: 10;
+}
+
+.bottom {
+	position: relative;
+	background-color: rgb(51,51,0);
+	z-index: 10;
+	padding: 20px 0;
+}
+
+
+
+/**************************************************/
+/************* CUSTOM PLUGIN STYLES ***************/
+/**************************************************/
+
+//SMART POST LIST
+a.smart-post-list-title {
+	font-size:0.95em;
+}
+
+p.smart-post-list-date {
+	font-size: 0.8em;
+	color: scale-color($white, $lightness: -25%);
+}
+
+p.smart-post-list-excerpt {
+	font-size: 0.9em;
+	color: scale-color($white, $lightness: -25%);
+}
+
+
